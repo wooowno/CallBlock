@@ -1,29 +1,19 @@
 const {Pressable, Text, StyleSheet} = require('react-native');
+import styles from './styles';
 
 const Back = ({navigation}) => {
   return (
     <Pressable
-      style={styles.button}
+      style={({pressed}) => ({
+        ...styles.back,
+        backgroundColor: pressed ? '#A1C2DF' : '#b0d6f8',
+      })}
       onPress={() => {
         navigation.goBack();
       }}>
-      <Text style={styles.text}>Вернуться</Text>
+      <Text style={styles.text}>{'<<'}</Text>
     </Pressable>
   );
 };
 
 export default Back;
-
-const styles = StyleSheet.create({
-  button: {
-    width: 100,
-    height: 50,
-    backgroundColor: '#A0BEFF',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    textTransform: 'uppercase',
-  },
-});

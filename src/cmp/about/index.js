@@ -1,28 +1,17 @@
-import { Pressable, Text, StyleSheet } from 'react-native';
+import {Pressable, Text} from 'react-native';
+import styles from './styles';
 
-const About = ({ navigation }) => {
-	return (
-		<Pressable
-			style={styles.button}
-			onPress={() => navigation.navigate('About')}
-		>
-			<Text style={styles.text}>Справка</Text>
-		</Pressable>
-	);
+const About = ({navigation}) => {
+  return (
+    <Pressable
+      style={({pressed}) => ({
+        ...styles.about,
+        backgroundColor: pressed ? '#A1C2DF' : '#b0d6f8',
+      })}
+      onPress={() => navigation.navigate('About')}>
+      <Text style={styles.text}>Справка</Text>
+    </Pressable>
+  );
 };
 
 export default About;
-
-const styles = StyleSheet.create({
-	button: {
-		width: 100,
-		height: 50,
-		backgroundColor: '#A0BEFF',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	text: {
-		textTransform: 'uppercase',
-	},
-});

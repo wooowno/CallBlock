@@ -14,9 +14,9 @@ export default function App() {
       <Stack.Navigator
         initialRouteName="Auth"
         screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Auth" component={Auth} />
         <Stack.Screen name="Signin" component={Signin} />
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="About" component={About} />
       </Stack.Navigator>

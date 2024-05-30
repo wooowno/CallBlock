@@ -1,19 +1,12 @@
-import {zSing} from '@storage/pin';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import Confirm from '../confirm';
+import Sign from './sign';
+import styles from './styles';
 
-const Code = () => {
-  const sign = zSing(({sign}) => sign);
+export default Code = () => {
   return (
-    <View
-      style={{
-        height: 400,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-      <Text style={{fontSize: 50}}>{sign}</Text>
+    <View style={styles.code}>
+      <Sign />
     </View>
   );
 };
-
-export default Code;

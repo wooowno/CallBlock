@@ -1,21 +1,24 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {create} from 'zustand';
+import {persist, createJSONStorage} from 'zustand/middleware';
 
-const zList = create((set, get) => ({
-  list: true,
-  setList: () => set(({list}) => ({list: !list})),
+const zList = create(
+  persist(
+    (set, get) => ({
+      list: true,
+      setList: () => set(({list}) => ({list: !list})),
 
-  white: [],
-  setWhite: list => set({white: list}),
-  addWhite: n => set(state => ({white: [...state.white, n]})),
+      white: [],
+      setWhite: list => set({white: list}),
 
-  black: [],
-  setBlack: list => set({black: list}),
-  addBlack: n => set(state => ({black: [...state.black, n]})),
-  includesBlack: n =>
-    get(({black}) => {
-      const f = black.filter(obj => obj.number === n);
-      return f.length > 0;
+      black: [],
+      addBlack: n => set(state => ({black: [...state.black, n]})),
     }),
-}));
+    {
+      name: 'list-storage',
+      storage: createJSONStorage(() => AsyncStorage),
+    },
+  ),
+);
 
 export default zList;

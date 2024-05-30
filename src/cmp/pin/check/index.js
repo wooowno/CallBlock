@@ -1,14 +1,9 @@
 import {View, StyleSheet} from 'react-native';
+import styles from './styles';
 
 const Check = ({len}) => {
   return (
-    <View
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        gap: 10,
-        margin: 20,
-      }}>
+    <View style={styles.container}>
       <Point style={len >= 1 ? 'fill' : 'check'} />
       <Point style={len >= 2 ? 'fill' : 'check'} />
       <Point style={len >= 3 ? 'fill' : 'check'} />
@@ -20,20 +15,5 @@ const Check = ({len}) => {
 export default Check;
 
 const Point = ({style}) => {
-  return <View style={styles[style]}></View>;
+  return <View style={{...styles[style], ...styles.point}}></View>;
 };
-
-const styles = StyleSheet.create({
-  check: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    backgroundColor: '#e4e4e4',
-  },
-  fill: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    backgroundColor: '#7C9CE0',
-  },
-});

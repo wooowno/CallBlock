@@ -1,17 +1,14 @@
-const {View, Text, Pressable} = require('react-native');
-import Logo from '@cmp/logo';
-import About from '@src/cmp/about';
+import Page from '@cmp/page';
 import Pin from '@cmp/pin';
+import Title from '@cmp/title';
 import login from './fn';
 
 const Login = ({navigation}) => {
   return (
-    <View>
-      <Logo />
-      <Text>Введите код</Text>
+    <Page title="Вход" nav={navigation} about={true} back={false}>
+      <Title up="Введите пароль" />
       <Pin fn={login} nav={navigation} />
-      <About navigation={navigation} />
-    </View>
+    </Page>
   );
 };
 
