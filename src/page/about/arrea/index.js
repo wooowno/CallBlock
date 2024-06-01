@@ -1,28 +1,35 @@
-import {StyleSheet} from 'react-native';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
+import styles from './styles';
 
 export default Arrea = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.area}></View>
+      <View style={styles.area}>
+        <Text style={styles.text}>
+          {'     '}Приложение позволяет блокировать поступающие нежелательные
+          звонки.
+        </Text>
+        <Text style={styles.text}>
+          {'     '}Зарегистрируйтесь, введя с помощью клавиатуры, появляющейся
+          при авторизации, пароль - пин-код. Он должен состоять из четырех цифр.
+        </Text>
+        <Text style={styles.text}>
+          {'     '}При авторизации в приложении необходимо использовать
+          введенный при регистрации код.
+        </Text>
+        <Text style={styles.text}>
+          {'     '}Номера телефонов из контактной книги автоматически вносятся в
+          белый список, позволяющий им совершать звонок на данный телефон.
+          Остальные номера автоматически блокируются и добавляются в черный
+          список. Редактируйте списки, перенося номер телефона из одного списка
+          в другой.
+        </Text>
+        <Text style={styles.text}>
+          {'     '}Проект «Безопасный звонок» разработан по заказу Белгородской
+          региональной общественной организации "Центр помощи молодым мамам
+          "Мама в деле".
+        </Text>
+      </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  area: {
-    width: '90%',
-    height: 500,
-    backgroundColor: '#f5f5f5',
-    borderRadius: 40,
-    borderStyle: 'solid',
-    borderColor: '#b8daf7',
-    borderWidth: 4,
-  },
-});

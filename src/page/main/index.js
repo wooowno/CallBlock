@@ -3,12 +3,11 @@ import getContacts from '@tool/contacts';
 import zList from '@src/storage/list';
 import Toggle from './toggle';
 import List from './list';
-import {useEffect} from 'react';
+import detectCall from '@tool/call';
 
 const Main = ({navigation}) => {
-  useEffect(() => {
-    getContacts();
-  }, []);
+  detectCall();
+  getContacts();
   const {list, setList} = zList(state => state);
   const title = list ? 'Белый список' : 'Чёрный список';
   return (

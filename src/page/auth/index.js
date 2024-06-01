@@ -1,7 +1,6 @@
 import Page from '@cmp/page';
 import Pin from '@cmp/pin';
 import Title from '@cmp/title';
-import zPin from '@storage/pin';
 import {zSing} from '@storage/pin';
 import requestPermission from '@tool/permissions';
 import auth from './fn';
@@ -10,14 +9,7 @@ import {useEffect} from 'react';
 const Auth = ({navigation}) => {
   requestPermission();
 
-  // const pin = zPin(({pin}) => pin);
   const sign = zSing(({sign}) => sign);
-
-  // useEffect(() => {
-  //   if (pin) {
-  //     // navigation.navigate('Login');
-  //   }
-  // }, []);
 
   useEffect(() => {
     if (sign) {

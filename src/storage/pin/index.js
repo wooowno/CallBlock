@@ -5,8 +5,6 @@ import {persist, createJSONStorage} from 'zustand/middleware';
 const zPin = create(
   persist(
     (set, get) => ({
-      first: true,
-      setFirst: () => set({first: false}),
       pin: '',
       setPin: pin => set({pin}),
     }),
