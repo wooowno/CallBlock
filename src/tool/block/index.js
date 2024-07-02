@@ -1,6 +1,7 @@
 import {NativeModules} from 'react-native';
-const {BlockNumberModule} = NativeModules;
+const {BlockNumberModule} = NativeModules; // нативный модуля из android\app\src\main\java\com\callblock
 
+// Блокирует переданные номер телефона
 export default blockNumber = phoneNumber => {
   BlockNumberModule.blockNumber(phoneNumber, (error, success) => {
     if (error) {

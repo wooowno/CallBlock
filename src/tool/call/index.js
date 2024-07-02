@@ -4,6 +4,7 @@ import Contacts from 'react-native-contacts';
 import zList from '@src/storage/list';
 import block from '@tool/block';
 
+// Отслеживает входящие звонки
 const detectCall = () => {
   const addBlack = zList(({addBlack}) => addBlack);
 

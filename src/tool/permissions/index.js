@@ -1,5 +1,6 @@
 import {PermissionsAndroid} from 'react-native';
 
+// Получение разрешений
 async function requestPermission() {
   try {
     const granted = await PermissionsAndroid.requestMultiple([
@@ -9,6 +10,7 @@ async function requestPermission() {
     ]);
     const grt = granted === PermissionsAndroid.RESULTS.GRANTED;
   } catch (err) {
+    // TODO обработка отказа в доступе
     console.warn(err);
     return false;
   }

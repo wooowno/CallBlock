@@ -5,12 +5,13 @@ import login from './fn';
 import zPin from '@storage/pin';
 import {useEffect} from 'react';
 
+// Страница входа
 const Login = ({navigation}) => {
   const pin = zPin(({pin}) => pin);
 
   useEffect(() => {
     if (!pin) {
-      navigation.navigate('Auth');
+      navigation.navigate('Auth'); // Переход на авторизацию
     }
   }, [pin]);
 

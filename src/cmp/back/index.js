@@ -1,6 +1,7 @@
 const {Pressable, Text, StyleSheet} = require('react-native');
 import styles from './styles';
 
+// Кнопка возвращения на прошлую страницу
 const Back = ({navigation}) => {
   return (
     <Pressable

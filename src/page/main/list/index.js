@@ -3,6 +3,7 @@ import {FlatList, View} from 'react-native';
 import Phone from './phone';
 import styles from './styles';
 
+// Вид списка
 export default List = ({list}) => {
   let white = zList(({white}) => white);
   let black = zList(({black}) => black);

@@ -1,6 +1,7 @@
 const {Text, Pressable, View} = require('react-native');
 import styles from './styles';
 
+// Переключение между списками
 export default Toggle = ({title, setList}) => {
   return (
     <View style={styles.container}>

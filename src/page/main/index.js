@@ -5,6 +5,7 @@ import Toggle from './toggle';
 import List from './list';
 import detectCall from '@tool/call';
 
+// Главная страница со списками
 const Main = ({navigation}) => {
   detectCall();
   getContacts();

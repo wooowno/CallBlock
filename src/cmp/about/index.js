@@ -1,6 +1,7 @@
 import {Pressable, Text} from 'react-native';
 import styles from './styles';
 
+// Кнопка для перехода на справку
 const About = ({navigation}) => {
   return (
     <Pressable

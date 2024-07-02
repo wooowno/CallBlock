@@ -1,6 +1,7 @@
 import Contacts from 'react-native-contacts';
 import zList from '@src/storage/list';
 
+// Записывает список контавтов с телефона в локальное хранилище
 function getContacts() {
   const setWhite = zList(({setWhite}) => setWhite);
   Contacts.getAll()

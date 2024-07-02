@@ -4,6 +4,7 @@ import styles from './styles';
 import Header from './header';
 import Footer from './footer';
 
+// Вид страницы
 export default Page = ({title, nav, back = false, about = true, children}) => {
   return (
     <View style={styles.page}>

@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {create} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
 
+// Хранилище пинкода
 const zPin = create(
   persist(
     (set, get) => ({
@@ -15,6 +16,7 @@ const zPin = create(
   ),
 );
 
+// Хранилище для регистрации
 export const zSing = create((set, get) => ({
   sign: '',
   setSign: sign => set({sign}),

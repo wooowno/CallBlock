@@ -5,6 +5,7 @@ import {View} from 'react-native';
 import zPin from '@storage/pin';
 import {useEffect} from 'react';
 
+// Страница авторизации -> сохранение пинкода
 const Signin = ({navigation}) => {
   const pin = zPin(({pin}) => pin);
 

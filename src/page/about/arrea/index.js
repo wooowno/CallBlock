@@ -1,6 +1,7 @@
 import {View, Text} from 'react-native';
 import styles from './styles';
 
+// Содержимое справки
 export default Arrea = () => {
   return (
     <View style={styles.container}>
